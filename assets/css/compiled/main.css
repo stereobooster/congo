@@ -1704,6 +1704,13 @@ body:has(#menu-controller:checked) {
   text-decoration-line: underline;
 }
 
+/* LQIP */
+
+picture > img {
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+}
+
 .pointer-events-none {
   pointer-events: none;
 }

@@ -41,7 +41,7 @@
   {{ else }}
     <picture 
       {{ with $class }} class="{{ . }}" {{ end }}
-      {{ if $lqip }}
+      {{ if (and $lqip $lazy) }}
         {{ $bg := (.Resize "20x webp q20").Content | base64Encode }}
         style="background-image:url(data:image/webp;base64,{{ $bg }});background-size:cover"
       {{ end }}

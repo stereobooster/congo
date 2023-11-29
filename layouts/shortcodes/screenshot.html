@@ -14,7 +14,8 @@
 
     {{ $lazy := $.Page.Site.Params.enableImageLazyLoading | default true }}
     {{ $webp := $.Page.Site.Params.enableImageWebp | default true }}
-    {{ partial "picture.html" (dict "img" $image "alt" $altText "x2" true "lazy" $lazy "webp" $webp) }}
+    {{ $lqip := $.Page.Site.Params.enableImageLqip | default false }}
+    {{ partial "picture.html" (dict "img" $image "alt" $altText "x2" true "lazy" $lazy "webp" $webp "lqip" $lqip) }}
 
     {{- if .Get "href" }}</a>{{ end -}}
     {{- if .Get "caption" -}}

@@ -299,4 +299,10 @@ body:has(#menu-controller:checked) {
   @apply underline;
 }
 
+/* LQIP */
+picture > img {
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+}
+
 @tailwind utilities;
